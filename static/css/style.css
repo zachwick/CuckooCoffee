@@ -1,0 +1,45 @@
+/*
+  Styles for Cuckoo Coffee Online Order System
+*/
+
+body {
+    display:block;
+    position:absolute;
+    width:100%;
+    height:100%;
+    margin:0px;
+}
+
+.cc-main-wrapper {
+    position:absolute;
+    height:100%;
+    width:100%;
+    background: -moz-linear-gradient(#4A412F,#909080); /*FF 3.6+*/
+    background: -ms-linear-gradient(#4A412F,#909080); /*IE 10*/
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#4A412F),color-stop(100%,#909080)); /*Safari4+, Chrome2+*/
+    background: -webkit-linear-gradient(#4A412F,#909080); /*Safari5.1+*/
+    background: -o-linear-gradient(#4A412F,#909080); /*Opera 11.10*/
+    -ms-filter: "progrid:DXImageTransform.Microsoft.gradient(startColorstr='#4A412F',endColorstr='#909080')"; /* IE 8+ */
+    background: linear-gradient(#4A412F,#909080);
+}
+
+.cc-header {
+    position:absolute;
+    top:0px;
+    height:120px;
+    width:100%;
+}
+
+#header-logo {
+    display:inline;
+    position:absolute;
+    left:25px;
+    bottom:10px;
+}
+
+#header-right-background {
+    display:inline;
+    position:absolute;
+    top:0px;
+    right:0px;
+}

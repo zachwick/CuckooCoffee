@@ -1,0 +1,20 @@
+$def with (page)
+<html>
+  <head>
+    <title>Cuckoo Coffee</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <script src="/static/js/jquery-1.7.1.min.js"></script>
+    <script src="/static/js/script.js"></script>
+  </head>
+  <body>
+    <div class="cc-main-wrapper">
+      <div class="cc-header">
+	<img src="/static/img/logo.png" id="header-logo">
+	<img src="/static/img/background.png" id="header-right-background">
+      </div>
+      <div class="cc-content-wrapper">
+	$:page
+      </div>
+    </div>
+  </body>
+</html>
