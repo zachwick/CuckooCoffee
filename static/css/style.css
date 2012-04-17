@@ -43,3 +43,36 @@ body {
     top:0px;
     right:0px;
 }
+
+.cc-content-wrapper {
+    position:absolute;
+    top:120px;
+    left:25px;
+    right:25px;
+}
+
+.cc-header-buttons {
+    position:absolute;
+    top:0px;
+    width:100%;
+    background:#4A412F;
+}
+
+.cc-header-button {
+    display:inline;
+    width:auto;
+    padding-top:2px;
+    padding-bottom:2px;
+    padding-left:4px;
+    padding-right:4px;
+    color:#FFFFFF;
+    cursor:pointer;
+}
+
+.cc-header-button active {
+    background:#E4C47C;
+}
+
+.cc-header-button:hover {
+    background:#E4C47C;
+}

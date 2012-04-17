@@ -13,7 +13,18 @@ $def with (page)
 	<img src="/static/img/background.png" id="header-right-background">
       </div>
       <div class="cc-content-wrapper">
-	$:page
+	<div class="cc-header-buttons">
+	  <div class="cc-header-button active" id="home-button">Home</div>
+	  <div class="cc-header-button" id="story-button">Our
+	  Story</div>
+	  <div class="cc-header-button" id="menu-button">Menu</div>
+	  <div class="cc-header-button" id="info-button">Directions &
+	  Hours</div>
+	  <div class="cc-header-button" id="order-button">Order Online</div>
+	</div>
+	<div class="cc-inner-page-wrapper">
+	  $:page
+	</div>
       </div>
     </div>
   </body>
