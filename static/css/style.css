@@ -127,19 +127,17 @@ body {
 }
 
 .cc-inner-page-wrapper {
-    position:absolute;
+    position:relative;;
     display:block;
     top:176px;
     width:100%;
-    min-height:100px;
     height:auto;
     background:#E3DCC0;
 }
 
 .order-steps {
-    position:absolute;
+    position:relative;
     top:0px;
-    width:100%;
     height:60px;
     left:25px;
     right:25px;
@@ -174,10 +172,12 @@ body {
 .order-content {
     position:relative;
     background:#ECE7D4;
-    top:38px;
+    top:0px;
     margin-left:12px;
     margin-right:12px;
     height:auto;
+    padding-bottom:50px;
+    padding-top:13px;
 }
 
 #order-header-text {
@@ -190,5 +190,19 @@ body {
     display:inline-block;
     height:92px;
     width:415px;
-    border:1px solid #6b6b64;
+    border-radius:8px;
+    margin-top:13px;
+    cursor:pointer;
+}
+
+#singular-order-type-box {
+    border:2px solid #6b6b64;
+    background:#D9D5C3;
+    margin-left:13px;
+}
+
+#multiple-order-type-box {
+    border:2px solid #1299D9;
+    background:#C3D9D5;
+    margin-left: 30px;
 }
