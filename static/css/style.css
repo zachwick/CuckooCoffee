@@ -66,13 +66,13 @@ body {
     height:100%;
     padding-top:5px;
     line-height:100%;
-    padding-left:4px;
-    padding-right:4px;
+    padding-left:8px;
+    padding-right:8px;
     color:#FFFFFF;
     cursor:pointer;
 }
 
-.cc-header-button active {
+.cc-header-button.active, #home-button.active{
     background:#E4C47C;
     font-weight:bold;
     color:#000000;
@@ -102,4 +102,28 @@ body {
 
 #banner-art {
     float:right;
+}
+
+#banner-text-wrapper {
+    position:relative;
+    height:100%;
+    float:left;
+}
+
+#error-message-wrapper {
+    position:absolute;
+    bottom:0px;
+    height:45px;
+    width:350px;
+    margin-left:auto;
+    margin-right:auto;
+    border:#000000;
+    background:#E4C47C;
+}
+
+.cc-inner-page-wrapper {
+    position:absolute;
+    top:176px;
+    width:100%;
+    background:#E3DCC0;
 }

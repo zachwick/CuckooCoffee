@@ -13,13 +13,11 @@
       </div>
       <div class="cc-content-wrapper">
 	<div class="cc-header-buttons">
-	  <div class="cc-header-button active" id="home-button">Home</div>
-	  <div class="cc-header-button" id="story-button">Our
-	  Story</div>
-	  <div class="cc-header-button" id="menu-button">Menu</div>
-	  <div class="cc-header-button" id="info-button">Directions &
-	  Hours</div>
-	  <div class="cc-header-button" id="order-button">Order Online</div>
+	  <div class="cc-header-button active" id="home-button" onclick="load_tab_content('home');">Home</div>
+	  <div class="cc-header-button" id="story-button" onclick="load_tab_content('story');">Our Story</div>
+	  <div class="cc-header-button" id="menu-button" onclick="load_tab_content('menu');">Menu</div>
+	  <div class="cc-header-button" id="info-button" onclick="load_tab_content('info');">Directions & Hours</div>
+	  <div class="cc-header-button" id="order-button" onclick="load_tab_content('order');">Order Online</div>
 	</div>
 	<div class="cc-banner">
 	  <div id="banner-text-wrapper">
@@ -28,8 +26,10 @@
 	  <img src="/static/img/banner-latte-art.png" id="banner-art">
 	</div>
 	<div class="cc-inner-page-wrapper">
+	  
 	</div>
       </div>
+      <div id="error-message-wrapper" style="display:none;"></div>
     </div>
   </body>
 </html>

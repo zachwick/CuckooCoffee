@@ -30,6 +30,7 @@ class Index:
 class Order:
     def GET(self):
         """ Show the order page content """
+        return render.order()
 
 app = web.application(urls,globals())
 
