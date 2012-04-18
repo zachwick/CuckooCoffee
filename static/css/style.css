@@ -2,6 +2,11 @@
   Styles for Cuckoo Coffee Online Order System
 */
 
+* {
+    font-family:droid-sans;
+    font-face:droid-sans;
+}
+
 body {
     display:block;
     position:absolute;
@@ -123,8 +128,10 @@ body {
 
 .cc-inner-page-wrapper {
     position:absolute;
+    display:block;
     top:176px;
     width:100%;
+    min-height:100px;
     background:#E3DCC0;
 }
 
@@ -133,6 +140,7 @@ body {
     top:0px;
     width:100%;
     height:60px;
+    margin-left:25px;
 }
 
 .order-step {
@@ -148,10 +156,21 @@ body {
 
 .big-step-text {
     display:inline-block;
-    font-size:18px;
+    font-size:36px;
+    font-family:Acknowledgement;
+    font-face:Acknowledgement;
 }
 
 .small-step-text {
     display:inline-block;
     font-size:16px;
+}
+
+.order-content {
+    position:absolute;
+    background:#ECE7D4;
+    top:38px;
+    left:12px;
+    right:12px;
+    bottom:12px;
 }
