@@ -5,8 +5,10 @@
 */
 function load_tab_content(get_page) {
     if (get_page == "home") {
+	activate_button("home-button");
 	display_error("Not implemented yet.");
     } else if (get_page == "order") {
+	activate_button("order-button");
 	jQuery(".cc-inner-page-wrapper").fadeOut("fast",function() {
 	    jQuery.ajax({
 		type:"GET",
@@ -18,15 +20,33 @@ function load_tab_content(get_page) {
 	});
 	jQuery(".cc-inner-page-wrapper").fadeIn("fast");
     } else if (get_page == "story") {
+	activate_button("story-button");
 	display_error("Not implemented yet.");
     } else if (get_page == "menu") {
+	activate_button("menu-button");
 	display_error("Not implemented yet.");
     } else if (get_page == "info") {
+	activate_button("info-button");
 	display_error("Not implemented yet.");
     } else {
 	display_error("Unrecognized page.");
     }
 }
+
+/*
+  @author: Zach Wick
+  @description: Resets all .cc-header-button's to non-active except id
+  @param: id of button to make .active
+*/
+function activate_button(activeId) {
+    jQuery(".cc-header-button").each(function() {
+	jQuery(this).removeClass("active");
+	if (jQuery(this).attr("id") == activeId) {
+	    jQuery(this).addClass("active");
+	}
+    });
+}
+
 
 /*
   @author: Zach Wick
