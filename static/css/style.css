@@ -3,8 +3,8 @@
 */
 
 * {
-    font-family:droid-sans;
-    font-face:droid-sans;
+    font-family:"Droid Sans";
+    font-face:"Droid Sans";
 }
 
 .large-text {
@@ -157,13 +157,17 @@ body {
 
 .order-step {
     display:inline-block;
-    color:#b7b2a0;
+    color:#CDCDCF;
     height:100%;
     width:30%;
 }
 
 .order-step.active {
-    color:#4a412f;
+    color:#4A412f;
+}
+
+.order-step.completed {
+    color:#0093D9;
 }
 
 .big-step-text {
@@ -194,6 +198,14 @@ body {
 
 #order-header-text {
     margin-left:13px;
+    margin-right:13px;
+    font-size:16px;
+}
+
+#location-text {
+    margin-left:13px;
+    margin-right:13px;
+    margin-top:25px;
     font-size:16px;
 }
 
@@ -202,6 +214,7 @@ body {
     display:inline-block;
     height:92px;
     width:415px;
+    margin-top:13px;
     border-radius:8px;
     cursor:pointer;
     background:#EBEBEB;
@@ -244,7 +257,7 @@ body {
 }
 
 #multiple-order-type-text {
-    right:55px;
+    right:75px;
     top:12px;
 }
 
@@ -267,4 +280,14 @@ body {
 
 #multiple-order-type-img {
     left:20px;
+}
+
+#delivery-method-wrapper {
+    margin-top:25px;
+    margin-left:13px;
+    margin-right:13px;
+}
+
+.wrapper-label {
+    font-weight:bold;
 }
