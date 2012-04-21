@@ -21,15 +21,12 @@
 
 body {
     display:block;
-    position:absolute;
     width:100%;
-    height:100%;
     margin:0px;
 }
 
 .cc-main-wrapper {
-    position:absolute;
-    height:100%;
+    position:relative;
     width:100%;
     background: -moz-linear-gradient(#4A412F,#909080); /*FF 3.6+*/
     background: -ms-linear-gradient(#4A412F,#909080); /*IE 10*/
@@ -38,10 +35,11 @@ body {
     background: -o-linear-gradient(#4A412F,#909080); /*Opera 11.10*/
     -ms-filter: "progrid:DXImageTransform.Microsoft.gradient(startColorstr='#4A412F',endColorstr='#909080')"; /* IE 8+ */
     background: linear-gradient(#4A412F,#909080);
+    padding-bottom:120px;
 }
 
 .cc-header {
-    position:absolute;
+    position:relative;
     top:0px;
     height:120px;
     width:100%;
@@ -62,14 +60,14 @@ body {
 }
 
 .cc-content-wrapper {
-    position:absolute;
-    top:120px;
-    left:25px;
-    right:25px;
+    position:relative;
+    top:0px;
+    margin-left:25px;
+    margin-right:25px;
 }
 
 .cc-header-buttons {
-    position:absolute;
+    position:relative;
     top:0px;
     height:28px;
     width:100%;
@@ -110,8 +108,8 @@ body {
 }
 
 .cc-banner {
-    position:absolute;
-    top:30px;
+    position:relative;
+    top:0px;
     width:100%;
     height:146px;
     background:#000000;
@@ -139,24 +137,26 @@ body {
 }
 
 .cc-inner-page-wrapper {
-    position:relative;;
+    position:relative;
     display:block;
-    top:176px;
+    top:0px;
     width:100%;
     height:auto;
     background:#E3DCC0;
+    padding-bottom:55px;
 }
 
 .order-steps {
     position:relative;
     top:0px;
     height:60px;
-    left:25px;
-    right:25px;
+    margin-left:25px;
+    margin-right:25px;
 }
 
 .order-step {
     display:inline-block;
+    vertical-align:middle;
     color:#CDCDCF;
     height:100%;
     width:30%;
@@ -172,9 +172,12 @@ body {
 
 .big-step-text {
     display:inline-block;
+    position:relative;
     font-size:36px;
     font-family:Acknowledgement;
     font-face:Acknowledgement;
+    top:13px;
+    vertical-align:middle;
 }
 
 .small-step-text {
@@ -182,7 +185,8 @@ body {
     display:inline-block;
     font-size:16px;
     font-weight:bold;
-    top:-3px;
+    top:15px;
+    vertical-align:middle;
 }
 
 .order-content {
