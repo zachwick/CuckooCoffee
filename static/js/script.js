@@ -67,16 +67,16 @@ function start_order(orderType) {
     if (orderType == "singular") {
 	display_error("Not implemented yet.");
     } else if (orderType == "multiple") {
-	jQuery(".order-content").fadeOut("fast",function() {
+	jQuery("#multiple-order-content").fadeOut("fast",function() {
 	    jQuery.ajax({
 		type:"GET",
-		url:"../order_step2",
+		url:"../multi_order",
 		success:function(html) {
-		    jQuery(".order-content").html(html);
+		    jQuery("#multiple-order-content").html(html);
 		}		
 	    });
 	});
-	jQuery(".order-content").fadeIn("fast");
+	jQuery("#multiple-order-content").fadeIn("fast");
     } else {
 	display_error("Unrecognized order type.");
     }

@@ -14,7 +14,7 @@ import datetime
 urls = (
     '/','Index',
     '/order','Order',
-    '/order_step2','Order2'
+    '/multi_order','MultiOrder'
 )
 
 ### Templates
@@ -33,10 +33,10 @@ class Order:
         """ Show the beginning of the order squence """
         return render.order()
 
-class Order2:
+class MultiOrder:
     def GET(self):
         """ Show the 2nd step of the order process """
-        return render.order2()
+        return render.multiorder()
 
 app = web.application(urls,globals())
 

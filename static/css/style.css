@@ -25,6 +25,10 @@ body {
     margin:0px;
 }
 
+input[type="radio"] {
+    margin-top:25px;
+}
+
 .cc-main-wrapper {
     position:relative;
     width:100%;
