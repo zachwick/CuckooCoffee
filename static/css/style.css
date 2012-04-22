@@ -320,7 +320,7 @@ body {
     margin-left:13px;
 }
 
-#multiple-order-type-box {
+#multiple-order-type-box,#delivery-date-future-box {
     margin-left: 30px;
 }
 
@@ -344,6 +344,11 @@ body {
 
 #delivery-method-wrapper {
     margin-top:25px;
+    margin-left:13px;
+    margin-right:13px;
+}
+
+#order-time-wrapper {
     margin-left:13px;
     margin-right:13px;
 }
