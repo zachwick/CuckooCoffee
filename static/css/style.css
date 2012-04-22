@@ -309,3 +309,12 @@ input[type="radio"] {
 .wrapper-label {
     font-weight:bold;
 }
+.wrapper-label.alt {
+    color:#727272;
+}
+
+#delivery-zipcode-wrapper {
+    margin-top:25px;
+    margin-left:43px;
+}
+

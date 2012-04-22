@@ -81,3 +81,18 @@ function start_order(orderType) {
 	display_error("Unrecognized order type.");
     }
 }
+
+/*
+  @author: Zach Wick
+  @description: This function performs the validation on the zipcode input
+*/
+function validate_zipcode() {
+    var testValue = jQuery("#delivery-zipcode").val();
+    var allowedZips = new Array("01460");
+    var validates = (jQuery.isNumeric(testValue) && (allowedZips.indexOf(testValue) != -1));
+    if (validates) {
+	
+    } else {
+
+    }
+}
