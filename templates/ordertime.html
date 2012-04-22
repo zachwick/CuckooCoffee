@@ -2,10 +2,22 @@
   <div class="wrapper-label">WHEN IS THE ORDER NEEDED BY?</div>
   <div class="order-type-box" id="delivery-date-today-box"
        onclick="set_delivery_date('today');">
-
+    <img class="order-type-img" id="delivery-date-today-img"
+	 src="/static/img/icon-today.png">
+    <div class="order-type-text" id="delivery-date-today-text">
+      <div class="large-text">TODAY</div>
+      <div class="medium-text">Earliest delivery to you:<br/><b>3:30 PM</b></div>
+    </div>
   </div>
   <div class="order-type-box" id="delivery-date-future-box"
        onclick="set_delivery_date('future');">
-
+    <img class="order-type-img" id="delivery-date-future-img"
+	 src="/static/img/icon-futuredate.png">
+    <div class="order-type-text" id="delivery-date-future-text">
+      <div class="large-text">A FUTURE DATE</div>
+      <div class="medium-text">We deliver from 8 AM to 5PM,<br/>Monday-Friday.</div>
+    </div>
+    <img class="order-type-selected-img"
+    src="/static/img/checkmark-large.png" style="display:none;"/>
   </div>
 </div>

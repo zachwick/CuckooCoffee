@@ -162,3 +162,15 @@ function toggle_order_time_section(toState) {
 	});
     }
 }
+
+/*
+  
+*/
+function set_delivery_date(dateToSet) {
+    if (dateToSet == "today") {
+	display_error("Not yet implemented.");
+    } else if (dateToSet == "future") {
+	jQuery("#delivery-date-future-box").addClass("selected");
+	jQuery("#delivery-date-future-box > .order-type-selected-img").show();
+    }
+}

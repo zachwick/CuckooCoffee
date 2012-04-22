@@ -316,6 +316,18 @@ body {
     top:12px;
 }
 
+#delivery-date-today-text {
+    top:15px;
+    right:150px;
+    text-align:left;
+}
+
+#delivery-date-future-text {
+    top:15px;
+    right:100px;
+    text-align:left;
+}
+
 #singular-order-type-box {
     margin-left:13px;
 }
@@ -327,6 +339,16 @@ body {
 .order-type-img {
     position:absolute;
     top:15px;
+}
+
+#delivery-date-today-img {
+    left:30px;
+    top:30px;
+}
+
+#delivery-date-future-img {
+    left:30px;
+    top:30px;
 }
 
 .order-type-selected-img {
