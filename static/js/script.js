@@ -73,6 +73,8 @@ function start_order(orderType) {
 		url:"../multi_order",
 		success:function(html) {
 		    jQuery("#multiple-order-content").html(html);
+		    jQuery("#multiple-order-type-box").addClass("selected");
+		    jQuery("#multiple-order-type-box > .order-type-selected-img").show();
 		}		
 	    });
 	});

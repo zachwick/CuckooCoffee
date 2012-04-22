@@ -264,15 +264,30 @@ body {
     color:#0093D9;
 }
 .order-type-box .medium-text {
-    color:#000000;
+    color:##000000;
 }
 .order-type-box .small-text {
-    colror:#B1B1AC;
+    color:#B1B1AC;
 }
 
 .order-type-box:hover {
     background:#D4EDF9;
     border:2px solid #0093D9;
+}
+
+.order-type-box.selected {
+    background:#7BCDF4;
+    border:2px solid #0093D9;
+}
+.order-type-box.selected .large-text {
+    color:#FFFFFF;
+}
+.order-type-box.selected:hover {
+    background:#7BCDF4;
+    border:2px solid #0093D9;    
+}
+.order-type-box.selected:hover .large-text {
+    color:#FFFFFF;
 }
 
 .order-type-box:hover .large-text {
@@ -314,6 +329,11 @@ body {
     top:15px;
 }
 
+.order-type-selected-img {
+    position:absolute;
+    top:15px;
+    right:25px;
+}
 #singular-order-type-img {
     left:30px;
 }

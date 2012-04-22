@@ -1,19 +1,21 @@
 <div id="delivery-method-wrapper">
   <div class="wrapper-label">DELIVERY METHOD</div>
-  <input type="radio" name="order.pickupOption" id="pickup-radio-option"
-	 value="pickup">I will pick up my order at Cuckoo
-  Coffee. <a href="#">Get Directions</a></input>
+  <div class="styled-radio" name="order.pickupOption" id="pickup-radio-option"
+       value="pickup"
+       onclick="toggle_radio(this);"></div><div class="styled-radio-text">I will pick up
+       my order at Cuckoo Coffee. <a href="#">Get Directions</a></div>
   <br>
-  <input type="radio" name="order.pickupOption"
-	 id="delivery-radio-option" value="delivery">Please include free
-  delivery with my minimum order of <b>5 drinks.</b></input>
+  <div class="styled-radio" name="order.pickupOption"
+       id="delivery-radio-option" value="delivery"
+       onclick="toggle_radio(this);"></div><div class="styled-radio-text">Please include free
+    delivery with my minimum order of <b>5 drinks.</b></div>
 </div>
 <div id="delivery-zipcode-wrapper">
-  <div class="wrapper-label alt">Where will we be delivering to?</div>
+  <div class="wrapper-label alt">Where will we be delivering to?</div><br/>
   <label id="delivery-zipcode-label" for="order.zipcode">Zip/Postal Code</label>
   <input type="text" name="order.zipcode" id="delivery-zipcode"
-  value="" size="5" onchange="validate_zipcode();"></input>
-  <img id="delivery-zipcode-img" src=""/>
+	 value="" size="5" onchange="validate_zipcode();"></input>
+  <img id="delivery-zipcode-img" src="" style="display:none;"/>
   <div id="delivery-zipcode-location-wrapper">
     <div class="city-state-text"></div>
     <div class="delivery-details"></div>
