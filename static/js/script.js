@@ -118,5 +118,24 @@ function toggle_radio(radio) {
     });
     if (!jQuery("#"+radio.id).hasClass("checked")) {
 	jQuery("#"+radio.id).append("<div class='styled-radio-checked'></div>").addClass("checked");
+	if (radio.id == "delivery-radio-option") {
+	    toggle_zip("show");
+	} else {
+	    toggle_zip("hide");
+	}
+    }
+}
+
+/*
+  @author: Zach Wick
+  @description: This function shows the zipcode entrance section is delivery is chosen
+*/
+function toggle_zip(toState) {
+    if (toState == "show") {
+	jQuery("#delivery-zipcode-wrapper").fadeIn('fast',function() {});
+    } else if (toState == "hide") {
+	jQuery("#delivery-zipcode-wrapper").fadeOut('fast',function() {});
+    } else {
+	console.log("Error: Unrecognized toState for function toggle_zip");
     }
 }
