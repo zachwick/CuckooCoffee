@@ -89,10 +89,32 @@ function start_order(orderType) {
 function validate_zipcode() {
     var testValue = jQuery("#delivery-zipcode").val();
     var allowedZips = new Array("01460");
-    var validates = (jQuery.isNumeric(testValue) && (allowedZips.indexOf(testValue) != -1));
+    var validates = (jQuery.isNumeric(testValue) && (allowedZips.indexOf(testValue) != -1) && testValue.length < 6);
     if (validates) {
-	
+	jQuery("#delivery-zipcode-img").attr("src","/static/img/checkmark-small.png").show();
+	jQuery("#delivery-zipcode-location-wrapper > .city-state-text").html("Littleton, Massachusetts").removeClass("error");
+	jQuery("#delivery-zipcode-location-wrapper > .delivery-details").html("We'll ask for your delivery details later on!");
     } else {
+	jQuery("#delivery-zipcode-img").attr("src","/static/img/crossout-small.png").show();
+	if (!jQuery.isNumeric(testValue) || testValue.length>5) {
+	    jQuery("#delivery-zipcode-location-wrapper > .city-state-text").html("Invalid Zipcode").addClass("error");
+	    jQuery("#delivery-zipcode-location-wrapper > .delivery-details").html("You've entered an invalid zipcode. Zipcodes are 5 digits long and contain no numbers");
+	} else {
+	    jQuery("#delivery-zipcode-location-wrapper > .city-state-text").html("Albany, New York").addClass("error");
+	    jQuery("#delivery-zipcode-location-wrapper > .delivery-details").html("Sorry! We only deliver with a 10-mile radius of Westford, Massachusetts.<img src='/static/img/icon-popup.png'/><a href='#'>Look up coffeeshops near Albany, New York</a>");
+	}
+    }
+}
 
+/*
+  @author: Zach Wick
+  @description: This function toggles the checked/unchecked state of the .styled-radio button
+*/
+function toggle_radio(radio) {
+    jQuery(".styled-radio[name='"+jQuery("#"+radio.id).attr("name")+"']").each(function() {
+	jQuery(this).empty().removeClass("checked");
+    });
+    if (!jQuery("#"+radio.id).hasClass("checked")) {
+	jQuery("#"+radio.id).append("<div class='styled-radio-checked'></div>").addClass("checked");
     }
 }

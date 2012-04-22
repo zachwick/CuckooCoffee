@@ -25,10 +25,35 @@ body {
     margin:0px;
 }
 
-input[type="radio"] {
+.styled-radio {
     margin-top:25px;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    appearance:none;
+    width:20px;
+    height:20px;
+    border:solid 1px #000000;
+    border-radius:10px;
+    cursor:pointer;
+    background:#FFFFFF;
+    display:inline-block;
 }
-
+.styled-radio-checked {
+    position:relative;
+    height:12px;
+    width:12px;
+    left:3px;
+    top:3px;
+    border:solid 1px #4A412F;
+    background: #4A412F;
+    border-radius:8px;
+}
+.styled-radio-text {
+    display:inline-block;
+    position:relative;
+    top:-5px;
+    margin-left:12px;
+}
 .cc-main-wrapper {
     position:relative;
     width:100%;
@@ -103,19 +128,16 @@ input[type="radio"] {
 
 .cc-header-button.active, #home-button.active{
     background:#E4C47C;
-    font-weight:bold;
     color:#000000;
 }
 
 .cc-header-button:hover {
     background:#E4C47C;
-    font-weight:bold;
     color:#000000;
 }
 
 #home-button {
     color:#E4C47C;
-    font-weight:bold;
 }
 #home-button:hover {
     color:#000000;
@@ -311,6 +333,7 @@ input[type="radio"] {
 }
 .wrapper-label.alt {
     color:#727272;
+    margin-bottom:5px;
 }
 
 #delivery-zipcode-wrapper {
@@ -318,3 +341,27 @@ input[type="radio"] {
     margin-left:43px;
 }
 
+#delivery-zipcode-img {
+    display:inline;
+    vertical-align:middle;
+}
+
+#delivery-zipcode-location-wrapper {
+    display:block;
+    position:relative;
+    width:450px;
+    top:-35px;
+    left:250px;
+}
+
+.city-state-text {
+    font-weight:bold;
+    color:#000000;
+}
+.city-state-text.error {
+    color:#727272;
+}
+
+.delivery-details {
+    color:#727272;
+}
