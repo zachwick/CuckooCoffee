@@ -79,6 +79,9 @@ function start_order(orderType) {
 	    });
 	});
 	jQuery("#multiple-order-content").fadeIn("fast");
+	if (jQuery("#order-status-text").html().indexOf("Group") == -1) {
+	    jQuery("#order-status-text").html(jQuery("#order-status-text").html()+"Group Order - ");
+	}
     } else {
 	display_error("Unrecognized order type.");
     }
@@ -97,6 +100,9 @@ function validate_zipcode() {
 	jQuery("#delivery-zipcode-location-wrapper > .city-state-text").html("Littleton, Massachusetts").removeClass("error");
 	jQuery("#delivery-zipcode-location-wrapper > .delivery-details").html("We'll ask for your delivery details later on!");
 	toggle_order_time_section("show");
+	if (jQuery("#order-status-text").html().indexOf("Delivery") == -1) {
+	    jQuery("#order-status-text").html(jQuery("#order-status-text").html()+"Delivery to "+jQuery("#delivery-zipcode-location-wrapper > .city-state-text").html()+" - ");
+	}
     } else {
 	jQuery("#delivery-zipcode-img").attr("src","/static/img/crossout-small.png").show();
 	if (!jQuery.isNumeric(testValue) || testValue.length>5) {
@@ -208,5 +214,9 @@ function get_selected_time() {
 
     jQuery("#order-time-text > .delivery-date").html(selectedDate.toDateString());
     jQuery("#order-time-text > .delivery-time").html("Delivered by "+timeStr);
-    //alert(selectedDate.toDateString());
+    jQuery("#order-time-text-img").show();
+    jQuery("#next-step-wrapper-step-2").show();
+    var orderStatus = jQuery("#order-status-text").html().split("-");
+    orderStatus[2] = selectedDate.toDateString()+" by "+timeStr.replace("<","");
+    jQuery("#order-status-text").html(orderStatus[0]+" - "+orderStatus[1]+" - "+orderStatus[2]);
 }

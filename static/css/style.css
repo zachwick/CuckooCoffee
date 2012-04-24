@@ -235,7 +235,13 @@ body {
     padding-bottom:50px;
     padding-top:13px;
 }
-
+#order-status-text {
+    text-align:left;
+    margin-left:12px;
+    margin-right:12px;
+    margin-top:25px;
+    color:#000000;
+}
 #order-header-text {
     margin-left:13px;
     margin-right:13px;
@@ -383,7 +389,7 @@ body {
     margin-bottom:5px;
 }
 
-#delivery-zipcode-wrapper,#order-time-picker-wrapper {
+#delivery-zipcode-wrapper,#order-time-picker-wrapper,.next-step-wrapper {
     margin-top:25px;
     margin-left:43px;
 }
@@ -426,11 +432,57 @@ body {
     margin-left:25px;
     font-weight:bold;
 }
-
+#order-time-text-img {
+    position:relative;
+    display:inline-block;
+}
 .delivery-date {
 
 }
 
 .delivery-time {
 
+}
+
+.next-step-inner-wrapper {
+    float:right;
+    margin-right:13px;
+    margin-bottom:10px;
+}
+.next-step-text { 
+    position:relative;
+}
+.next-step-button {
+    position:relative;
+    width:250px;
+    border-radius:5px;
+    background:#E4C47C;
+    color:#FFFFFF;
+    border:solid 1px #000000;
+    padding-top:4px;
+    padding-bottom:4px;
+}
+.next-step-button:hover {
+    background:#0093D3;
+}
+.next-step-button .text {
+    display:inline-block;
+    font-size:24px;
+    margin-left:55px;
+    vertical-align:middle;
+}
+.next-step-button .img {
+    display:inline-block;
+    position:relative;
+    height:26px;
+    width:14px;
+    vertical-align:middle;
+    background:url("/static/img/arrow-nextbutton-inactive.png");
+}
+.next-step-button:hover .img {
+    background:url("/static/img/arrow-nextbutton-hover.png");
+}
+
+#multple-order-content {
+    padding-bottom:25px;
 }
