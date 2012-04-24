@@ -383,7 +383,7 @@ body {
     margin-bottom:5px;
 }
 
-#delivery-zipcode-wrapper {
+#delivery-zipcode-wrapper,#order-time-picker-wrapper {
     margin-top:25px;
     margin-left:43px;
 }
@@ -411,4 +411,26 @@ body {
 
 .delivery-details {
     color:#727272;
+}
+
+#order-time-picker {
+    width:auto;
+    display:inline-block;
+
+}
+
+#order-time-text {
+    postion:relative;
+    display:inline-block;
+    width:200px;
+    margin-left:25px;
+    font-weight:bold;
+}
+
+.delivery-date {
+
+}
+
+.delivery-time {
+
 }

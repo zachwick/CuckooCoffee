@@ -172,5 +172,41 @@ function set_delivery_date(dateToSet) {
     } else if (dateToSet == "future") {
 	jQuery("#delivery-date-future-box").addClass("selected");
 	jQuery("#delivery-date-future-box > .order-type-selected-img").show();
+	jQuery("#order-time-picker-wrapper").show();
+	jQuery("#order-time-picker").jqdate({
+	    nextImg:"/static/img/arrow-nextbutton",
+	    prevImg:"/static/img/arrow-calendarbutton",
+	    dateImg:"/static/img/arrow-timeslot-button.png"
+	});
+	jQuery(".jqdate-time-table-col-0.active").live("click",function() {
+	    get_selected_time();
+	});
+	jQuery(".jqdate-time-table-col-1.active").live("click",function() {
+	    get_selected_time();
+	});
+	jQuery(".jqdate-time-table-col-2.active").live("click",function() {
+	    get_selected_time();
+	});
+	jQuery(".jqdate-time-table-col-3.active").live("click",function() {
+	    get_selected_time();
+	});
     }
+}
+
+/*
+  @author: Zach Wick
+  @description: This function gets the selected date+time
+*/
+function get_selected_time() {
+    var date = new Date();
+    var year = date.getFullYear();
+    var month = date.getMonth();
+    var day = parseInt(jQuery(".jqdate-header-date.selected").children(".jqdate-header-num").html());
+    var selectedDate = new Date(year,month,day);
+    var timeStr = jQuery(".active.selected").html().substr(0,7);
+
+
+    jQuery("#order-time-text > .delivery-date").html(selectedDate.toDateString());
+    jQuery("#order-time-text > .delivery-time").html("Delivered by "+timeStr);
+    //alert(selectedDate.toDateString());
 }
