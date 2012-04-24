@@ -1,0 +1,3 @@
+[submodule "static/jqDate"]
+	path = static/jqDate
+	url = git@github.com:ZachWick/jqDate
