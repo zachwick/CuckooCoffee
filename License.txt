@@ -1,0 +1,3 @@
+The rights to all images are reserved by Máirín Duffy
+
+All code is released under the MIT License (http://www.opensource.org/licenses/MIT)
