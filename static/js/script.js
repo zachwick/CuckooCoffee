@@ -4,6 +4,7 @@
   @param: string name of page to GET
 */
 function load_tab_content(get_page) {
+    jQuery(".cc-inner-page-wrapper").fadeOut("fast");
     if (get_page == "home") {
 	activate_button("home-button");
 	display_error("Not implemented yet.");
@@ -54,7 +55,9 @@ function activate_button(activeId) {
   @param: Error message to display
 */
 function display_error(msg) {
-    jQuery("#error-message-wrapper").html(msg).show();
+    jQuery("#error-message-wrapper > .message-text").html(msg);
+    jQuery("#error-message-wrapper").css("left",(jQuery(window).width()/2) - 175);
+    jQuery("#error-message-wrapper").show();
     jQuery("#error-message-wrapper").fadeOut(5000);
 }
 
@@ -64,8 +67,11 @@ function display_error(msg) {
   @param: Type of order to begin
 */
 function start_order(orderType) {
+    jQuery("#multiple-order-content").fadeOut("fast");
     if (orderType == "singular") {
 	display_error("Not implemented yet.");
+	jQuery("#multiple-order-type-box").removeClass("selected");
+	jQuery("#multiple-order-type-box > .order-type-selected-img").hide();
     } else if (orderType == "multiple") {
 	jQuery("#multiple-order-content").fadeOut("fast",function() {
 	    jQuery.ajax({
