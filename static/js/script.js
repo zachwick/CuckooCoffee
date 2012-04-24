@@ -116,7 +116,7 @@ function validate_zipcode() {
 	    jQuery("#delivery-zipcode-location-wrapper > .delivery-details").html("You've entered an invalid zipcode. Zipcodes are 5 digits long and contain no numbers");
 	} else {
 	    jQuery("#delivery-zipcode-location-wrapper > .city-state-text").html("Albany, New York").addClass("error");
-	    jQuery("#delivery-zipcode-location-wrapper > .delivery-details").html("Sorry! We only deliver with a 10-mile radius of Westford, Massachusetts.<img src='/static/img/icon-popup.png'/><a href='#'>Look up coffeeshops near Albany, New York</a>");
+	    jQuery("#delivery-zipcode-location-wrapper > .delivery-details").html("Sorry! We only deliver with a 10-mile radius of Westford, Massachusetts.<img src='/static/img/icon-popup.png'/><a href='http://maps.google.com/maps?q=coffee%20near%20Albany%2C%20New%20York' target='_blank'>Look up coffeeshops near Albany, New York</a>");
 	}
 	toggle_order_time_section("hide");
     }

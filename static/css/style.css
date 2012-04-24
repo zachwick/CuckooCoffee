@@ -7,6 +7,13 @@
     font-face:"Droid Sans";
 }
 
+a {
+    text-decoration:none;
+    margin-left:5px;
+}
+a:hover {
+    text-decoration:underline;
+}
 .large-text {
     font-size:24px;
 }
